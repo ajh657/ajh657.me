@@ -1,0 +1,41 @@
+name: Blob storage website CI
+
+on:
+    workflow_dispatch:
+    push:
+        branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: remove .git
+      run: rm -rf .git && ls -la
+      
+    - name: remove .github
+      run: rm -rf .github && ls -la
+      
+    - name: remove .vscode
+      run: rm -rf .vscode && ls -la
+      
+    - name: remove .gitignore
+      run: rm -rf .gitignore && ls -la
+    
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Upload to blob storage
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+            az storage blob upload-batch --account-name ajh657personalsawebsite --overwrite true --auth-mode key -d '$web' -s .
+
+  # Azure logout
+    - name: logout
+      run: |
+            az logout
+      if: always()
