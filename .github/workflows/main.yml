@@ -12,13 +12,16 @@ jobs:
     - uses: actions/checkout@v3
     
     - name: remove .git
-      run: rm -rf .git
+      run: rm -rf .git && ls -la
       
     - name: remove .github
-      run: rm -rf .github
+      run: rm -rf .github && ls -la
       
     - name: remove .vscode
-      run: rm -rf .vscode
+      run: rm -rf .vscode && ls -la
+      
+    - name: remove .gitignore
+      run: rm -rf .gitignore && ls -la
     
     - name: Login to Azure
       uses: azure/login@v1
@@ -29,7 +32,7 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-            az storage blob upload-batch --account-name ajh657personalsawebsite --auth-mode key -d '$web' -s .
+            az storage blob upload-batch --account-name ajh657personalsawebsite --override --auth-mode key -d '$web' -s .
 
   # Azure logout
     - name: logout
