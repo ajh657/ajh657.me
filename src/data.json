@@ -3,7 +3,7 @@
     "intro": "Greetings visitor\n This is my personal website with links to my social media",
     "links":[
         {
-            "link":"https:\/\/meow.social\/@ajh657",
+            "link":"https://meow.social/@ajh657",
             "icon":"fa-brands fa-mastodon",
             "linkColor":"563ACC",
             "iconColor":"6364FF",
@@ -11,7 +11,7 @@
             "linkDescription":"Primary social media"
         },
         {
-            "link":"https:\/\/www.furaffinity.net\/user\/ajh657",
+            "link":"https://www.furaffinity.net/user/ajh657",
             "icon":"fa-solid fa-dragon",
             "linkColor":"353B45",
             "iconColor":"FF9F19",
@@ -19,12 +19,20 @@
             "linkDescription":"Stories (Coming soon™)"
         },
         {
-            "link":"https:\/\/twitter.com\/ajh657",
+            "link":"https://twitter.com/ajh657",
             "icon":"fa-brands fa-twitter",
             "linkColor":"1B9DF0",
             "iconColor":"FFFFFF",
             "linkText":"Twitter",
             "linkDescription":"Archive of old posts"
+        },
+        {
+            "link":"https://steamcommunity.com/id/ajh657/",
+            "icon":"fa-brands fa-steam",
+            "linkColor":"231F20",
+            "iconColor":"FFFFFF",
+            "linkText":"Steam",
+            "linkDescription":"Steam profile"
         }
     ]
 }

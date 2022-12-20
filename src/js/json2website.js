@@ -5,7 +5,6 @@ async function json2website(url) {
     var json = await responce.text()
 
     var parsedData = JSON.parse(json)
-    console.log(parsedData)
 
     Object.keys(parsedData).forEach(function (key) {
         if (key == "links") {

@@ -9,7 +9,7 @@
 }
 
 .header>.title {
-    background-color: rgb(var(--Color-Secondary));
+    background-color: rgb(var(--Color-Primary));
 }
 
 .header>div>img {
@@ -55,5 +55,7 @@ body {
     width: 75%;
     font-family: 'Roboto', sans-serif;
     color: rgb(var(--Color-Tetriary));
-    background-color: rgb(var(--Color-Primary));
+    background-image: url(../img/Background.svg);
+    background-repeat: repeat;
+    background-size:20rem;
 }
