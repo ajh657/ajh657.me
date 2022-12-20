@@ -1,0 +1,30 @@
+{
+    "title":"AJH657 - Kerdu",
+    "intro": "Greetings visitor\n This is my personal website with links to my social media",
+    "links":[
+        {
+            "link":"https:\/\/meow.social\/@ajh657",
+            "icon":"fa-brands fa-mastodon",
+            "linkColor":"563ACC",
+            "iconColor":"6364FF",
+            "linkText":"Mastodon",
+            "linkDescription":"Primary social media"
+        },
+        {
+            "link":"https:\/\/www.furaffinity.net\/user\/ajh657",
+            "icon":"fa-solid fa-dragon",
+            "linkColor":"353B45",
+            "iconColor":"FF9F19",
+            "linkText":"Furaffinity",
+            "linkDescription":"Stories (Coming soon™)"
+        },
+        {
+            "link":"https:\/\/twitter.com\/ajh657",
+            "icon":"fa-brands fa-twitter",
+            "linkColor":"1B9DF0",
+            "iconColor":"FFFFFF",
+            "linkText":"Twitter",
+            "linkDescription":"Archive of old posts"
+        }
+    ]
+}
