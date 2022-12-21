@@ -8,7 +8,8 @@
             "linkColor":"563ACC",
             "iconColor":"6364FF",
             "linkText":"Mastodon",
-            "linkDescription":"Primary &#8203;social&nbsp;media"
+            "linkDescription":"Primary &#8203;social&nbsp;media",
+            "additionalAttributes":"rel=\"me\""
         },
         {
             "link":"https://www.furaffinity.net/user/ajh657",
