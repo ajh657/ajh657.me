@@ -32,25 +32,25 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-            az storage blob delete-batch  -s '$web' --pattern '*' --account-name ajh657personalsawebsite --auth-mode key
+            az storage blob delete-batch  -s '$web' --pattern '*' --account-name ${{ vars.STORAGEACCOUNTNAME }} --auth-mode key
 
     - name: (Debug) List Container contents
       uses: azure/CLI@v1
       with:
         inlineScript: |
-            az storage blob directory list -c '$web' -d '/'
+            az storage blob directory list -c '$web' -d '/' --account-name ${{ vars.STORAGEACCOUNTNAME }}
 
     - name: Upload to blob storage
       uses: azure/CLI@v1
       with:
         inlineScript: |
-            az storage blob upload-batch --account-name ajh657personalsawebsite --overwrite true --auth-mode key -d '$web' -s .
+            az storage blob upload-batch --account-name ${{ vars.STORAGEACCOUNTNAME }} --overwrite true --auth-mode key -d '$web' -s .
             
     - name: Purge Azure CDN Profile endpoint
       uses: azure/CLI@v1
       with:
         inlineScript: |
-           az cdn endpoint purge --content-paths  "/*" --profile-name "personal-cdnp-website" --name "ajh657personalsawebsite" --resource-group "personal-rg-northeu"
+           az cdn endpoint purge --content-paths  "/*" --profile-name "personal-cdnp-website" --name "${{ vars.STORAGEACCOUNTNAME }}" --resource-group "personal-rg-northeu"
 
     - name: Azure logout
       run: |
