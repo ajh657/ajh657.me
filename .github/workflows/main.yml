@@ -32,7 +32,13 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-            az storage blob delete-batch -s '$web' --account-name ajh657personalsawebsite --auth-mode key
+            az storage blob delete-batch -d '$web' -s . --account-name ajh657personalsawebsite --auth-mode key
+
+    - name: (Debug) List Container contents
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+            az storage blob directory list -c '$web' -d '/'
 
     - name: Upload to blob storage
       uses: azure/CLI@v1
