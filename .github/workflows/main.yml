@@ -34,12 +34,6 @@ jobs:
         inlineScript: |
             az storage blob delete-batch  -s '$web' --pattern '*' --account-name ${{ vars.STORAGEACCOUNTNAME }} --auth-mode key
 
-    - name: (Debug) List Container contents
-      uses: azure/CLI@v1
-      with:
-        inlineScript: |
-            az storage blob directory list -c '$web' -d '/' --account-name ${{ vars.STORAGEACCOUNTNAME }}
-
     - name: Upload to blob storage
       uses: azure/CLI@v1
       with:
