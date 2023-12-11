@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+.link-list > div {
+	border-radius: 10px;
+	padding: 0.25em;
+	margin: 0.5em 0.25em 0.5em 0.25em;
+	cursor: pointer;
+
+	/* font */
+	font-family: "Noto Sans", sans-serif;
+	font-size: 1em;
+	font-weight: 100;
+	color: #fff;
+}
+
+.link-list > div > a:hover,
+a:visited,
+a:link,
+a:active {
+	cursor: pointer;
+	color: unset;
+	text-decoration: none;
+}
+
+.link-list > div > a > i {
+	padding-right: 0.1em;
+	padding-left: 0.1em;
+}
+
+.github {
+	width: -moz-fit-content;
+	width: fit-content;
+	color: #fff;
+	background-color: #010409;
+}
+
+.steam {
+	width: -moz-fit-content;
+	width: fit-content;
+	color: #fff;
+	background-color: #231f20;
+}
