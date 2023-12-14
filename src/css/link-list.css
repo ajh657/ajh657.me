@@ -22,21 +22,45 @@ a:active {
 	text-decoration: none;
 }
 
-.link-list > div > a > i {
+.link-list > div > * > i {
 	padding-right: 0.1em;
 	padding-left: 0.1em;
 }
 
+.link-list > div > * > .username {
+    display: inline-flex;
+    margin-left: 1em;
+    justify-content: right;
+	align-items: right;
+    overflow: hidden;
+}
+
 .github {
-	width: -moz-fit-content;
-	width: fit-content;
 	color: #fff;
 	background-color: #010409;
 }
 
 .steam {
-	width: -moz-fit-content;
-	width: fit-content;
 	color: #fff;
 	background-color: #231f20;
+}
+
+.mastodon {
+    color: #fff;
+    background-color: #6364FF;
+}
+
+.discord {
+    color: #fff;
+    background-color: #7289DA;
+}
+
+.FFXIV {
+    color: #000;
+    background-color: #9E2536;
+}
+
+.furry-gallery {
+    color: #fff;
+    background-color: #588053;
 }
