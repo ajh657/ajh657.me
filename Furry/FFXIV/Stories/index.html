@@ -3,20 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Page Title</title>
+    <title>Story</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="../../css/colors.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="../../css/style.css"
-    />
+
+    <link rel="stylesheet" href="../../../src/css/colors.css" />
+    <link rel="stylesheet" href="../../../src/css/fonts.css" />
+    <link rel="stylesheet" href="../../../src/css/style.css" />
+    <link rel="stylesheet" href="../src/css/FFXIVStyle.css" />
+    <link rel="stylesheet" href="../../../src/css/link-list.css" />
+
+    <script src="../src/js/storymanager.js"></script>
+
     <script src="https://unpkg.com/htmx.org@1.9.9"></script>
     <!-- Google tag (gtag.js) -->
     <script
@@ -34,5 +31,11 @@
     </script>
   </head>
 
-  <body></body>
+  <body>
+    <div class="story-main">
+        <iframe title="story" id="story-container" src="./HTML/loader.html">
+
+        </iframe>
+    </div>
+  </body>
 </html>
