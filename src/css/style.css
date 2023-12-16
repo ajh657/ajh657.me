@@ -11,6 +11,8 @@ body {
 	background: linear-gradient(-45deg, rgb(var(--Color-Secondary)), rgb(var(--Color-Primary)));
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
+
+    font-size: large;
 }
 
 .main {

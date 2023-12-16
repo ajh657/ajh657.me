@@ -9,8 +9,12 @@ async function getStory() {
         if (storyhtml.ok) {
             var storytext = await storyhtml.text()
             document.getElementById("story-container").innerHTML = storytext;
+        
+            document.title = document.querySelector("#title-block-header > .title").innerText;
         }
 	}
 }
 
-window.addEventListener("DOMContentLoaded", getStory());
+window.addEventListener("DOMContentLoaded", () => {
+    getStory().then(() => {});
+});

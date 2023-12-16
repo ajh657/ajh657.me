@@ -1,5 +1,6 @@
 body{
-    background: #fff !important;
+    background: rgb(26,169,255);
+background: linear-gradient(74deg, rgba(26,169,255,1) 0%, rgba(28,66,103,1) 38%, rgba(55,104,85,1) 69%, rgba(31,32,29,1) 100%);
 }
 
 .window{
@@ -8,4 +9,5 @@ body{
 
     border: 4px ridge #977F51 !important;
     border-radius: 10px !important;
+    padding: 0.5em;
 }

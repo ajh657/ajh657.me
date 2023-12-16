@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
-.link-list > div {
+.link-list > div, a {
 	border-radius: 10px;
 	padding: 0.25em;
 	margin: 0.5em 0.25em 0.5em 0.25em;
@@ -58,6 +58,11 @@ a:active {
 .FFXIV {
     color: #000;
     background-color: #9E2536;
+}
+
+.KerduThorin {
+    color: #fff !important;
+    background: linear-gradient(90deg, #588053 0%, #bb1515 100%);
 }
 
 .furry-gallery {
