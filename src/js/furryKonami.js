@@ -12,5 +12,5 @@ function onKonamiCode(cb) {
 }
 
 onKonamiCode(function () {
-	window.location = "./furry";
+	window.location = "./Furry";
 });
