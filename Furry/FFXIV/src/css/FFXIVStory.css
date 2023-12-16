@@ -1,0 +1,28 @@
+body {
+	/* centering */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    margin: unset !important;
+}
+
+.story-main{
+    max-width: 90% !important;
+    width: 65% !important;
+}
+
+.story-container {
+    color: white;
+    background-color: unset !important;
+    max-width: unset !important;
+    height: 100% !important;
+    margin-left: unset !important;
+    margin-right: unset !important;
+}
+
+.story-container > p{
+    text-align: justify;
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+    max-width: unset !important;
+}
