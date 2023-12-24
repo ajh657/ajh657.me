@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
-.link-list > div, a {
+.link-list > div,
+a {
 	border-radius: 10px;
 	padding: 0.25em;
 	margin: 0.5em 0.25em 0.5em 0.25em;
@@ -18,7 +19,6 @@ a:visited,
 a:link,
 a:active {
 	cursor: pointer;
-	color: unset;
 	text-decoration: none;
 }
 
@@ -28,11 +28,11 @@ a:active {
 }
 
 .link-list > div > * > .username {
-    display: inline-flex;
-    margin-left: 1em;
-    justify-content: right;
+	display: inline-flex;
+	margin-left: 1em;
+	justify-content: right;
 	align-items: right;
-    overflow: hidden;
+	overflow: hidden;
 }
 
 .github {
@@ -46,26 +46,31 @@ a:active {
 }
 
 .mastodon {
-    color: #fff;
-    background-color: #6364FF;
+	color: #fff;
+	background-color: #6364ff;
+}
+
+.mastodon > a {
+	padding-left: unset;
 }
 
 .discord {
-    color: #fff;
-    background-color: #7289DA;
+	color: #fff;
+	background-color: #7289da;
 }
 
 .FFXIV {
-    color: #000;
-    background-color: #9E2536;
+	color: #fff;
+	background-color: #9e2536;
+	display: block;
 }
 
 .KerduThorin {
-    color: #fff !important;
-    background: linear-gradient(90deg, #588053 0%, #bb1515 100%);
+	color: #fff !important;
+	background: linear-gradient(90deg, #588053 0%, #bb1515 100%);
 }
 
 .furry-gallery {
-    color: #fff;
-    background-color: #588053;
+	color: #fff;
+	background-color: #588053;
 }
