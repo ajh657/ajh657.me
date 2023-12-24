@@ -3,38 +3,48 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-    margin: unset !important;
+	margin: unset !important;
 }
 
-.story-main{
-    margin-top: 1em;
-    margin-bottom: 1em;
-    max-width: 90% !important;
-    width: 65% !important;
+.story-main {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	.story-main {
+		max-width: 90%;
+		width: 65%;
+		margin-left: unset;
+		margin-right: unset;
+	}
 }
 
 .story-container {
-    color: white;
-    background-color: unset !important;
-    max-width: unset !important;
-    height: 100% !important;
-    margin-left: unset !important;
-    margin-right: unset !important;
+	color: white;
+	background-color: unset !important;
+	max-width: unset !important;
+	height: 100% !important;
+	margin-left: unset !important;
+	margin-right: unset !important;
 
-    font-family: "OpenDyslexic", sans-serif;
+	font-family: "OpenDyslexic", sans-serif;
 }
 
-.title{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.title {
+	font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-#title-block-header > p{
-    font-family: "Bauhaus 93", 'Times New Roman', Times, serif;
+#title-block-header > p {
+	font-family: "Bauhaus 93", "Times New Roman", Times, serif;
 }
 
-.story-container > p{
-    text-align: justify;
-    margin-left: 1em !important;
-    margin-right: 1em !important;
-    max-width: unset !important;
+.story-container > p {
+	text-align: justify;
+	margin-left: 1em !important;
+	margin-right: 1em !important;
+	max-width: unset !important;
 }

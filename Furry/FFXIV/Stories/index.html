@@ -1,42 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Loading Story</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Loading Story</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="../../../src/css/colors.css" />
-    <link rel="stylesheet" href="../../../src/css/fonts.css" />
-    <link rel="stylesheet" href="../src/css/FFXIV.css" />
-    <link rel="stylesheet" href="../src/css/FFXIVStory.css" />
-    <link rel="stylesheet" href="../src/css/FFXIVWord.css" />
-    <link rel="stylesheet" href="../../../src/css/link-list.css" />
+		<link rel="stylesheet" href="../../../src/css/colors.css" />
+		<link rel="stylesheet" href="../../../src/css/fonts.css" />
+		<link rel="stylesheet" href="../src/css/FFXIV.css" />
+		<link rel="stylesheet" href="../src/css/FFXIVStory.css" />
+		<link rel="stylesheet" href="../src/css/FFXIVWord.css" />
+		<link rel="stylesheet" href="../../../src/css/link-list.css" />
 
-    <script src="../src/js/storymanager.js"></script>
+		<script src="../src/js/storymanager.js"></script>
 
-    <link rel="icon" type="image/png" href="../../img/KerduPFP.png" />
+		<link rel="icon" type="image/png" href="../../img/KerduPFP.png" />
 
-    <script src="https://unpkg.com/htmx.org@1.9.9"></script>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-PT630X48BH"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+		<script src="https://unpkg.com/htmx.org@1.9.9"></script>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT630X48BH"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
 
-      gtag("config", "G-PT630X48BH");
-    </script>
-  </head>
+			gtag("config", "G-PT630X48BH");
+		</script>
+	</head>
 
-  <body>
-    <div class="story-main window">
-        <div id="story-container" class="story-container"></div>
-      </div>
-  </body>
+	<body>
+		<div class="story-main window">
+			<div id="story-container" class="story-container">
+				<div class="spinner"></div>
+			</div>
+		</div>
+	</body>
 </html>
