@@ -48,3 +48,11 @@ body {
 	margin-right: 1em !important;
 	max-width: unset !important;
 }
+
+.spoiler-warning {
+    color: white;
+    font-weight: bold;
+    background-color: red;
+    border-radius: 10px;
+    padding: 0.5em;
+}
