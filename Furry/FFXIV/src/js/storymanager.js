@@ -17,6 +17,10 @@ async function GetStory() {
 	} else {
 		document.getElementById("story-container").innerHTML = "<h1>404</h1><p>Story not found.</p>";
 	}
+
+    if (posthog !== undefined) {
+        posthog.capture("Story Loaded", {"story": story});
+    }
 }
 
 window.addEventListener("DOMContentLoaded", () => GetStory(), false);
