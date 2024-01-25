@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor-Frontend", "src\app\Blazor-Frontend\Blazor-Frontend.csproj", "{38723531-6614-4391-9ED3-D1817301F7B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ajh657.Blazor.Frontend", "src\app\ajh657.Blazor.Frontend\ajh657.Blazor.Frontend.csproj", "{38723531-6614-4391-9ED3-D1817301F7B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,13 @@
+﻿@page "/"
+@layout CardLayout
+<PageTitle>Frontend</PageTitle>
+
+<RadzenText TextStyle="TextStyle.DisplayH2">Welcome to my website</RadzenText>
+
+<RadzenCard class="rz-shadow-0 ajh-primary-background">
+    <RadzenText TextStyle="TextStyle.H6">@Greeting</RadzenText>
+</RadzenCard>
+
+@code{
+    private string Greeting = "Hello, world!";
+}
