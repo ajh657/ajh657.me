@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Radzen;
 
-namespace ajh657.Blazor.Frontend
+namespace ajh657.Frontend
 {
     public class Program
     {
