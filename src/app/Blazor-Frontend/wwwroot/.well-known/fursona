@@ -1,0 +1,20 @@
+{
+    "sonas": [
+        {
+            "name": "Kerdu Athorin",
+            "pronouns": "He/Him",
+            "gender": "Male",
+            "species": "Wolf-Dragon Hybrid",
+            "description": "Kerdu Athorin is a wolf dragon hybrid who has been viewed as an outsider by respective species clans due to his hybrid status and lives with his boyfriend Thorin Otsoko.",
+            "ref": "https://ajh657.me/src/fursona/KerduReference.png",
+            "avatar": "http://ajh657.me/src/fursona/KerduAvatar.png",
+            "age": 21,
+            "colors": [
+                "#585858",
+                "#2B2B2B",
+                "#999999",
+                "#588053"
+            ]
+        }
+    ]
+}
