@@ -1,0 +1,29 @@
+﻿@inject NavigationManager NavigationManager
+
+<br />
+<RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.End">
+    <RadzenButton @ref=@Button class="ajh-accent-background" Click="@((args) => Popup.ToggleAsync(Button.Element))"><i class="fa-solid fa-paw"></i></RadzenButton>
+</RadzenStack>
+
+<Popup @ref=@Popup Style="position:absolute;display:none;">
+    <RadzenCard>
+        <RadzenTextBox AutoComplete="false" @ref=@TextBox Placeholder="UwU"/>
+        <RadzenButton class="ajh-accent-background" Click="@CheckPassphrase"><i class="fa-solid fa-question"></i></RadzenButton>
+    </RadzenCard>
+    
+</Popup>
+
+@code {
+    public Popup Popup { get; set; }
+    public RadzenButton Button { get; set; }
+    public RadzenTextBox TextBox { get; set; }
+
+    public void CheckPassphrase()
+    {
+        if (TextBox.Value == "OwO")
+        {
+            Popup.ToggleAsync(Button.Element);
+            NavigationManager.NavigateTo("/Furry");
+        }
+    }
+}

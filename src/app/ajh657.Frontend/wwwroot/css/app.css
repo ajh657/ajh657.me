@@ -74,9 +74,17 @@
 
 body {
     margin: 0px !important;
+    background: black no-repeat 180% 0/60% fixed url("/img/Background.svg") !important;
+}
+
+    body > * {
+        font-family: var(--rz-text-font-family);
+    }
+
+body {
 }
 
 #app {
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    min-width: 100vw;
 }

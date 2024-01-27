@@ -1,0 +1,11 @@
+﻿<RadzenCard class="link-list-item">
+    <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center">
+        <span><i class="@LinkItem.IconClass"></i></span>
+        @LinkItem.Name
+    </RadzenStack>
+</RadzenCard>
+
+@code {
+    [Parameter]
+    public required Link LinkItem { get; set; }
+}

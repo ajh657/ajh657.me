@@ -1,0 +1,49 @@
+﻿div.link-list-item:has(div > span > i.fa-github) {
+    background: #24292F;
+}
+
+div.link-list-item:has(div > i.fa-github) > div * {
+    text-decoration: none !important;
+}
+
+div.link-list-item:has(div > span > i.fa-steam) {
+    background: #00AEEF;
+}
+
+    div.link-list-item:has(div > span > i.fa-steam) > div,
+    div.link-list-item:has(div > span > i.fa-steam) > div > span > i {
+        color: #231F20 !important;
+    }
+
+div.link-list-item:has(div > span > i.fa-mastodon) {
+    background: white;
+}
+
+    div.link-list-item:has(div > span > i.fa-mastodon) > div {
+        color: #231F20 !important;
+    }
+
+        div.link-list-item:has(div > span > i.fa-mastodon) > div > span > i {
+            color: #6364FF !important;
+        }
+
+div.link-list-item:has(div > span > i.fa-discord) {
+    background: black;
+}
+
+    div.link-list-item:has(div > span > i.fa-discord) > div {
+        color: white !important;
+    }
+
+        div.link-list-item:has(div > span > i.fa-discord) > div > span > i {
+            color: #7289DA !important;
+        }
+
+div.link-list-item:has(div > span > i.fa-book-bookmark) {
+    background: #9E2536;
+}
+
+    div.link-list-item:has(div > span > i.fa-book-bookmark) > div,
+    div.link-list-item:has(div > span > i.fa-book-bookmark) > div > span > i {
+        color: white !important;
+    }

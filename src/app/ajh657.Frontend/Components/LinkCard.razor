@@ -1,0 +1,8 @@
+﻿<a href="@LinkItem.URL" style="text-decoration-line: none;">
+    <IconCard LinkItem="@LinkItem" />
+</a>
+
+@code {
+    [Parameter]
+    public required Link LinkItem { get; set; }
+}

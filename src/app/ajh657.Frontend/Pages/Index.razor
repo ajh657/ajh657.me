@@ -2,12 +2,18 @@
 @layout CardLayout
 <PageTitle>Frontend</PageTitle>
 
-<RadzenText TextStyle="TextStyle.DisplayH2">Welcome to my website</RadzenText>
+<HeadContent>
+    <link rel="stylesheet" href="css/link.css" />
+</HeadContent>
 
-<RadzenCard class="rz-shadow-0 ajh-primary-background">
-    <RadzenText TextStyle="TextStyle.H6">@Greeting</RadzenText>
-</RadzenCard>
+<RadzenStack Gap="0.5em">
+    <RadzenText TextStyle="TextStyle.DisplayH2">@Strings.Main.Title</RadzenText>
 
-@code{
-    private string Greeting = "Hello, world!";
-}
+    <RadzenCard class="rz-shadow-0 ajh-secondary-background">
+        <p>@Strings.Main.Greeting</p>
+    </RadzenCard>
+
+    <LinkCollectionList Links="@Links.Frontend.GetMainLinks()" Title="@Strings.Main.LinkListTitle" />
+</RadzenStack>
+
+<FurryPassphrase/>

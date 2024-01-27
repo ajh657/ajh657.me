@@ -13,8 +13,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Components\" />
-    <Folder Include="Pages\Furry\" />
+    <Folder Include="wwwroot\furry\img\" />
+    <Folder Include="wwwroot\js\" />
+    <Folder Include="wwwroot\img\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\util\ajh657.Common.Data\ajh657.Common.Data.csproj" />
   </ItemGroup>
 
 </Project>

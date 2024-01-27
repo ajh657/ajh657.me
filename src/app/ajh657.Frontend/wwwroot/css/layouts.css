@@ -1,0 +1,13 @@
+﻿.layout-card {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+    .layout-card > .rz-stack {
+        min-height: 100vh;
+        min-width: 100vw;
+    }
+
+        .layout-card > .rz-stack > .rz-card > .rz-text-display-h2 {
+            margin-top: unset !important;
+        }

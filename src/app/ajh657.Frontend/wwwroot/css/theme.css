@@ -1,3 +1,40 @@
 ﻿.ajh-primary-background {
     background-color: #2B2B2B;
+    color: #FFFFFF;
 }
+
+    .ajh-primary-background * {
+        color: #FFFFFF;
+    }
+
+.ajh-secondary-background {
+    background-color: #585858;
+}
+
+    .ajh-secondary-background * {
+        color: #FFFFFF;
+    }
+
+.ajh-tertiary-background {
+    background-color: #999999;
+}
+
+    .ajh-tertiary-background * {
+        color: #000000;
+    }
+
+.ajh-accent-background {
+    background-color: #588053;
+}
+
+    .ajh-accent-background * {
+        color: #000000;
+    }
+
+button.ajh-accent-background {
+    background-color: #588053 !important;
+}
+
+    button.ajh-accent-background * {
+        color: #000000 !important;
+    }
