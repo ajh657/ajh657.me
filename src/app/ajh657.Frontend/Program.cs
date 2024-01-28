@@ -20,7 +20,7 @@ namespace ajh657.Frontend
             rootComponent.Add<App>("#app");
             rootComponent.Add<HeadOutlet>("head::after");
 
-            services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+            services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.Configuration["API_ADDRESS"] ?? builder.HostEnvironment.BaseAddress) });
 
             services.AddRadzenComponents();
 

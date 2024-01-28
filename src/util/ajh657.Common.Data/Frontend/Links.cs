@@ -29,7 +29,7 @@ namespace ajh657.Common.Data.Frontend
                         {
                             IconClass = "fa-solid fa-book-bookmark",
                             Name = "FurAffinity",
-                            URL = "/Furry/FFXIVStories"
+                            URL = "/Furry/FFXIV"
                         }
                     ];
                 }

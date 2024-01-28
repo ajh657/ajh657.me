@@ -1,0 +1,12 @@
+﻿body {
+    background: rgb(26, 169, 255);
+    background: linear-gradient(74deg, rgba(26, 169, 255, 1) 0%, rgba(28, 66, 103, 1) 38%, rgba(55, 104, 85, 1) 69%, rgba(31, 32, 29, 1) 100%);
+}
+
+.ffxiv-window {
+    background: linear-gradient(0deg, rgba(48, 48, 48, 1) 98%, rgba(97, 99, 98, 1) 100%) !important;
+    box-shadow: inset 0 0 10px #000 !important;
+    border: 4px ridge #977f51 !important;
+    border-radius: 10px !important;
+    padding: 0.5em;
+}

@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\util\ajh657.Common.Data\ajh657.Common.Data.csproj" />
+    <ProjectReference Include="..\..\util\ajh657.Common.Strings\ajh657.Common.Strings.csproj" />
   </ItemGroup>
 
 </Project>

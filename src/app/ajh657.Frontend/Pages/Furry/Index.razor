@@ -2,15 +2,12 @@
 @layout FurryCardLayout
 <PageTitle>@Strings.Furry.PageTitle</PageTitle>
 
-<HeadContent>
-    <link rel="stylesheet" href="furry/css/furry.css" />
-    <link rel="stylesheet" href="css/link.css" />
-</HeadContent>
-
 <RadzenStack Gap="0.5em">
     <RadzenStack Orientation="Orientation.Horizontal">
         <RadzenImage Path="furry/img/KerduWithBackroundLargeV2.png" class="furry-pfp rz-border-radius-2" />
-        <RadzenText TextStyle="TextStyle.DisplayH2">@Strings.Furry.Title</RadzenText>
+        <RadzenCard class="ajh-accent-background">
+                <RadzenText TextStyle="TextStyle.DisplayH2">@Strings.Furry.Title</RadzenText>
+        </RadzenCard>
     </RadzenStack>
 
     <RadzenCard class="rz-shadow-0 ajh-secondary-background">
