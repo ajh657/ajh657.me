@@ -1,13 +1,45 @@
 ﻿@page "/Furry/FFXIV"
 @layout FFXIVLayout
+@inject HttpClient Http
 
 <RadzenStack Gap="0.5em">
     <RadzenText TextStyle="TextStyle.DisplayH2">@Strings.Furry.Sections.HobbiesSubsections.FFXIVSubSection.Title</RadzenText>
 
-    <RadzenCard class="rz-shadow-0 ajh-secondary-background">
+        <RadzenCard class="rz-shadow-0 ajh-secondary-background">
             <p>@Strings.Furry.Sections.HobbiesSubsections.FFXIVSubSection.Greeting</p>
     </RadzenCard>
 
+    @if (Links != null)
+    {
+        <LinkCollectionList Links="@Links" Title="@Strings.Furry.Sections.HobbiesSubsections.FFXIVSubSection.LinkListTitle" />
+    }
+    else
+    {
+        <RadzenCard>
 
-
+        </RadzenCard>
+    }
 </RadzenStack>
+
+@code {
+
+    public List<Link>? Links { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        var stories = await Http.GetFromJsonAsync<Story[]>("ListStories");
+
+        if (stories != null)
+        {
+            Links = stories.Select(x => new Link
+                {
+                    IconClass = "fa-solid fa-book",
+                    Name = x.Title,
+                    URL = x.StorageUrl
+                }).ToList();
+        }
+
+    }
+}

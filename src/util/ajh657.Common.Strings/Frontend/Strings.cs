@@ -27,6 +27,7 @@
                         public const string PageTitle = "FFXIV Stories";
                         public const string Title = "FFXIV Stories";
                         public const string Greeting = "Here you will find some of my FFXIV stories.";
+                        public const string LinkListTitle = "Stories";
                     }
                 }
                 public const string SocialListTitle = "Socials";

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using ajh657.Backend.Interop;
+using ajh657.Common.Data.Backend;
 using ajh657.Common.Data.Records;
 using ajh657.Common.Strings.Backend;
 using Azure.Storage.Blobs;
@@ -25,20 +26,20 @@ namespace ajh657.Backend.Cache
                                                                                       Strings.CosmosContainerCache,
                                                                                       Strings.CosmosStoryCacheItemId,
                                                                                       CacheType.Story.ToString());
+
             var cacheItem = cacheItemResponce?.Resource;
 
-            cacheItem ??= await RebuildStoryCache();
+            cacheItem ??= await RefreshStoryCache();
 
-            if (cacheItem.data == null)
+            if (Util.StoryCacheRefreshNeeded(cacheItem))
             {
-                cacheItem = await RebuildStoryCache();
+                cacheItem = await RefreshStoryCache();
             }
 
             return cacheItem.data;
-
         }
 
-        public async Task<CacheItem<Story[]>> RebuildStoryCache()
+        public async Task<CacheItem<Story[]>> RefreshStoryCache()
         {
             var storiesSegemnts = _storyContainerClient.GetBlobsAsync().AsPages(default, 5);
 

@@ -32,14 +32,14 @@ namespace ajh657.Backend.Interop
         public async Task<ItemResponse<T>?> UpdateAsync<T>(string databaseName, string containerName, string id, string partitionKey, T item)
         {
             var container = _client.GetContainer(databaseName, containerName);
-            var response = await container.ReplaceItemAsync(item, id, new PartitionKey(partitionKey));
+            var response = await container.ReplaceItemAsync(item, id);
             return response;
         }
 
         public async Task<ItemResponse<T>?> UpsertAsync<T>(string databaseName, string containerName, string id, string partitionKey, T item)
         {
             var container = _client.GetContainer(databaseName, containerName);
-            var response = await container.UpsertItemAsync(item, new PartitionKey(partitionKey));
+            var response = await container.UpsertItemAsync(item);
             return response;
         }
 

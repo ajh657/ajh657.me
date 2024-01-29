@@ -1,4 +1,5 @@
-﻿using Microsoft.Azure.Functions.Worker.Http;
+﻿using ajh657.Common.Data.Records;
+using Microsoft.Azure.Functions.Worker.Http;
 
 namespace ajh657.Common.Data.Backend
 {
@@ -32,6 +33,31 @@ namespace ajh657.Common.Data.Backend
             }
 
             return userAgent;
+        }
+
+        public static bool StoryCacheRefreshNeeded(CacheItem<Story[]>? cacheItem)
+        {
+            if (cacheItem == null)
+            {
+                return true;
+            }
+
+            if (cacheItem.data == null)
+            {
+                return true;
+            }
+
+            if (cacheItem.ExpiryDate < DateTime.Now.AddDays(-7))
+            {
+                return true;
+            }
+
+            if (cacheItem.ManualExpiry)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }

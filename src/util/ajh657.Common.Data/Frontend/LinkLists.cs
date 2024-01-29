@@ -2,7 +2,7 @@
 
 namespace ajh657.Common.Data.Frontend
 {
-    public static class Links
+    public static class LinkLists
     {
         public static class Frontend
         {

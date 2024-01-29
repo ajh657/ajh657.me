@@ -1,15 +1,18 @@
 ﻿<RadzenCard class="ajh-secondary-background">
     <RadzenStack Orientation="Orientation.Vertical" AlignItems="AlignItems.Stretch">
         <h2 class="social-list-title">@Title</h2>
-        @foreach (var link in Links)
+        @if (Links != null)
         {
-            if (!string.IsNullOrEmpty(link.URL))
+            foreach (var link in Links)
             {
-                <LinkCard LinkItem="link" />
-            }
-            else
-            {
-                <IconCard LinkItem="link" />
+                if (!string.IsNullOrEmpty(link.URL))
+                {
+                    <LinkCard LinkItem="link" />
+                }
+                else
+                {
+                    <IconCard LinkItem="link" />
+                }
             }
         }
     </RadzenStack>
@@ -17,7 +20,7 @@
 
 @code {
     [Parameter]
-    public List<Link> Links { get; set; } = new List<Link>();
+    public List<Link>? Links { get; set; }
     [Parameter]
     public string Title { get; set; } = "Links";
 }

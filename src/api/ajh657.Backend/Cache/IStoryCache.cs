@@ -7,6 +7,6 @@ namespace ajh657.Backend.Cache
     public interface IStoryCache
     {
         Task<IEnumerable<Story>> GetStoriesAsync();
-        Task<CacheItem<Story[]>> RebuildStoryCache();
+        Task<CacheItem<Story[]>> RefreshStoryCache();
     }
 }
