@@ -16,7 +16,7 @@
     else
     {
         <RadzenCard>
-
+            <p>No Stories found</p>
         </RadzenCard>
     }
 </RadzenStack>
@@ -29,16 +29,30 @@
     {
         await base.OnInitializedAsync();
 
-        var stories = await Http.GetFromJsonAsync<Story[]>("ListStories");
-
-        if (stories != null)
+        try
         {
-            Links = stories.Select(x => new Link
-                {
-                    IconClass = "fa-solid fa-book",
-                    Name = x.Title,
-                    URL = x.StorageUrl
-                }).ToList();
+            var endpoint = "ListStories";
+
+#if DEBUG
+            endpoint = "api/ListStories";
+#endif
+
+            var stories = await Http.GetFromJsonAsync<IEnumerable<Story>>(endpoint);
+
+            if (stories != null)
+            {
+                Links = stories.Select(x => new Link
+                    {
+                        IconClass = "fa-solid fa-book",
+                        Name = x.Title,
+                        URL = x.StorageUrl
+                    }).ToList();
+            }
+
+        }
+        catch (Exception e)
+        {
+
         }
 
     }
