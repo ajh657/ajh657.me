@@ -4,6 +4,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	margin: unset !important;
+    flex-flow: column;
 }
 
 .story-main {
@@ -30,8 +31,18 @@ body {
 	height: 100% !important;
 	margin-left: unset !important;
 	margin-right: unset !important;
+    padding-top: unset !important;
 
-	font-family: "OpenDyslexic", sans-serif;
+}
+
+.story-font {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.story-font-OpenDyslexic {
+    font-family: "OpenDyslexic", sans-serif;
 }
 
 .title {
@@ -56,3 +67,47 @@ body {
     border-radius: 10px;
     padding: 0.5em;
 }
+
+div.btn-font-group{
+    padding: 10px 16px
+}
+
+div.btn-font-group > button {
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 5em;
+    border-color: black;
+    color: white;
+    background: rgb(59,59,59);
+background: linear-gradient(0deg, rgba(59,59,59,1) 0%, rgba(41,40,40,1) 50%, rgba(68,68,68,1) 100%);
+}
+
+/* Style the list */
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+  }
+  
+  /* Display list items side by side */
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+  }
+  
+  /* Add a slash symbol (/) before/behind each list item */
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+  }
+  
+  /* Add a color to all links inside the list */
+  ul.breadcrumb li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Add a color on mouse-over */
+  ul.breadcrumb li a:hover {
+    color: grey;
+  }

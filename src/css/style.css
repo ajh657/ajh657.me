@@ -8,9 +8,7 @@ body {
 
 	margin: unset;
 
-	background: linear-gradient(-45deg, rgb(var(--Color-Secondary)), rgb(var(--Color-Primary)));
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+    background: black no-repeat 180% 0/60% fixed url("/src/img/Background.svg") !important;
 
     font-size: large;
 }
@@ -81,16 +79,4 @@ body {
 .furrypfp {
     width: 5em;
     margin-right: 0.5em;
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
 }

@@ -1,7 +1,3 @@
-html {
-	color: #1a1a1a;
-	background-color: #fdfdfd;
-}
 .story-container {
 	margin: 0 auto;
 	max-width: 36em;
@@ -45,80 +41,80 @@ html {
 		page-break-after: avoid;
 	}
 }
-p {
+.story-container > p {
 	margin: 1em 0;
 }
-a {
+.story-container > a {
 	color: #1a1a1a;
 }
-a:visited {
+.story-container > a:visited {
 	color: #1a1a1a;
 }
-img {
+.story-container > img {
 	max-width: 100%;
 }
-svg {
+.story-container > svg {
 	height: auto;
 	max-width: 100%;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.story-container > h1,
+.story-container > h2,
+.story-container > h3,
+.story-container > h4,
+.story-container > h5,
+.story-container > h6 {
 	margin-top: 1.4em;
 }
-h5,
-h6 {
+.story-container > h5,
+.story-container > h6 {
 	font-size: 1em;
 	font-style: italic;
 }
-h6 {
+.story-container > h6 {
 	font-weight: normal;
 }
-ol,
-ul {
+.story-container > ol,
+.story-container > ul {
 	padding-left: 1.7em;
 	margin-top: 1em;
 }
-li > ol,
-li > ul {
+.story-container > li > ol,
+.story-container > li > ul {
 	margin-top: 0;
 }
-blockquote {
+.story-container > blockquote {
 	margin: 1em 0 1em 1.7em;
 	padding-left: 1em;
 	border-left: 2px solid #e6e6e6;
 	color: #606060;
 }
-code {
+.story-container > code {
 	font-family: Menlo, Monaco, Consolas, "Lucida Console", monospace;
 	font-size: 85%;
 	margin: 0;
 	-webkit-hyphens: manual;
 	hyphens: manual;
 }
-pre {
+.story-container > pre {
 	margin: 1em 0;
 	overflow: auto;
 }
-pre code {
+.story-container > pre code {
 	padding: 0;
 	overflow: visible;
 	overflow-wrap: normal;
 }
-.sourceCode {
+.story-container > .sourceCode {
 	background-color: transparent;
 	overflow: visible;
 }
-hr {
+.story-container > hr {
 	background-color: #1a1a1a;
 	border: none;
 	height: 1px;
 	margin: 1em 0;
 }
-table {
+.story-container > table {
 	margin: 1em 0;
 	border-collapse: collapse;
 	width: 100%;
@@ -126,67 +122,67 @@ table {
 	display: block;
 	font-variant-numeric: lining-nums tabular-nums;
 }
-table caption {
+.story-container > table caption {
 	margin-bottom: 0.75em;
 }
-t.story-container {
+.story-container > t.story-container {
 	margin-top: 0.5em;
 	border-top: 1px solid #1a1a1a;
 	border-bottom: 1px solid #1a1a1a;
 }
-th {
+.story-container > th {
 	border-top: 1px solid #1a1a1a;
 	padding: 0.25em 0.5em 0.25em 0.5em;
 }
-td {
+.story-container > td {
 	padding: 0.125em 0.5em 0.25em 0.5em;
 }
-header {
+.story-container > header {
 	margin-bottom: 4em;
 	text-align: center;
 }
-#TOC li {
+.story-container > #TOC li {
 	list-style: none;
 }
-#TOC ul {
+.story-container > #TOC ul {
 	padding-left: 1.3em;
 }
-#TOC > ul {
+.story-container > #TOC > ul {
 	padding-left: 0;
 }
-#TOC a:not(:hover) {
+.story-container > #TOC a:not(:hover) {
 	text-decoration: none;
 }
-code {
+.story-container > code {
 	white-space: pre-wrap;
 }
-span.smallcaps {
+.story-container > span.smallcaps {
 	font-variant: small-caps;
 }
-div.columns {
+.story-container > div.columns {
 	display: flex;
 	gap: min(4vw, 1.5em);
 }
-div.column {
+.story-container > div.column {
 	flex: auto;
 	overflow-x: auto;
 }
-div.hanging-indent {
+.story-container > div.hanging-indent {
 	margin-left: 1.5em;
 	text-indent: -1.5em;
 }
 /* The extra [class] is a hack that increases specificity enough to
      override a similar rule in reveal.js */
-ul.task-list[class] {
+     .story-container > ul.task-list[class] {
 	list-style: none;
 }
-ul.task-list li input[type="checkbox"] {
+.story-container > ul.task-list li input[type="checkbox"] {
 	font-size: inherit;
 	width: 0.8em;
 	margin: 0 0.8em 0.2em -1.6em;
 	vertical-align: middle;
 }
-.display.math {
+.story-container > .display.math {
 	display: block;
 	text-align: center;
 	margin: 0.5rem auto;
