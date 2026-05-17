@@ -19,7 +19,14 @@
         <div class="title-bar">
             <div class="title-bar-text">Kerdu's Domain {{ if title }}- {{title}}{{ /if }}</div>
         </div>
-        {{ include subLayout != undefined? subLayout: "subLayout/default.vto" }}
+        <div class="main-window-body blog-window-body window-body has-space">
+            <ul role="menubar">
+                <li role="menuitem" tabindex="0"><a href="/blog">Back</a></li>
+            </ul>
+            <div class="blog-content">
+                {{content}}
+            </div>
+        </div>
 </body>
 
 </html>

@@ -1,0 +1,26 @@
+{{ if (item.children != undefined && item.data.basename != "") }}
+<li>
+    <details open>
+        <summary><a href="{{item.data.url}}">{{ if item.data.title == null}}
+                {{item.data.url}}
+                {{else}}
+                {{item.data.title}}
+                {{ /if }}</a></summary>
+        <ul>
+            {{ for child of item.children }}
+            <li>
+                {{ include "nav/nav_item.vto" { item: child } }}
+            </li>
+            {{ /for }}
+        </ul>
+    </details>
+</li>
+{{ else }}
+<li>
+    <a href="{{item.data.url}}">{{ if item.data.title == null}}
+        {{item.data.url}}
+        {{else}}
+        {{item.data.title}}
+        {{ /if }}</a>
+</li>
+{{ /if }}

@@ -1,0 +1,21 @@
+.blog-window-body {
+	padding: 0 !important;
+}
+
+.blog-content {
+	padding: 0 6px 6px 6px;
+	height: 100%;
+}
+
+.blog-window-body > ul > li {
+	cursor: pointer;
+}
+
+.blog-window-body > ul > li > a {
+	color: black;
+}
+
+.blog-window-body > ul > li > a:hover {
+	color: black;
+	text-decoration: none;
+}
