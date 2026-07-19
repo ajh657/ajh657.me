@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://unpkg.com/7.css">
+    <link rel="stylesheet" href="/src/css/personal.css">
+    <link rel="stylesheet" href="/src/css/7cssCustom.css">
+    {{ if CustomCSS != undefined }}
+    {{ for css of CustomCSS }}
+    <link rel="stylesheet" href="/src/css/{{css}}">
+    {{ /for }}
+    {{ /if }}
+    <title>Kerdu's Domain - Blog post - {{title}}</title>
+</head>
+
+<body>
+    <div class="window window-blog glass active main-window" style="--w7-w-bg: #588053">
+        <div class="title-bar">
+            <div class="title-bar-text">Kerdu's Domain - Blog post - {{title}}</div>
+        </div>
+        <div class="main-window-body blog-window-body window-body has-space">
+
+            <div class="blog-head">
+                <ul role="menubar">
+                    <li role="menuitem" tabindex="0"><a href="/blog">Back</a></li>
+                </ul>
+                <h1>{{title}}</h1>
+            </div>
+
+            <fieldset>
+                <legend>Text</legend>
+                <section class="blog-text has-scrollbar">
+                    {{content}}
+                </section>
+            </fieldset>
+        </div>
+</body>
+
+</html>

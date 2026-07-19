@@ -1,0 +1,45 @@
+name: Publish on GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v4
+
+      - name: Tailscale
+        uses: tailscale/github-action@v4
+        with:
+          authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
+
+      - name: Tailscale
+        uses: tailscale/github-action@v4
+        with:
+          ping: ${{ secrets.DESTINATION_HOST }}
+
+      - name: Focus Website
+        run: cd /src/website
+
+      - name: Setup Deno environment
+        uses: denoland/setup-deno@v2
+        with:
+          cache: true
+
+      - name: Build site
+        run: deno task build
+
+      - name: Copy to Remote Server
+        uses: pierrickdelrieu/scp-action@v0.1.0
+        with:
+          host: ${{ secrets.DESTINATION_HOST }}
+          ssh_port: ${{ secrets.DESTINATION_SSH_PORT }}
+          ssh_username: ${{ secrets.SSH_USERNAME }}
+          ssh_key: ${{ secrets.SSH_KEY }}
+          source_dir: ${{ secrets.SOURCE_FOLDER }}
+          destination_dir: ${{ secrets.DESTINATION_FOLDER }}
+          rm: true
