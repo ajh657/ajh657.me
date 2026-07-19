@@ -1,0 +1,65 @@
+.blog-window-body {
+	padding: 0 !important;
+}
+
+.blog-content {
+	display: flex;
+	height: 100%;
+	padding: 0 6px 6px 6px;
+}
+
+ul[role="menubar"] > li {
+	cursor: pointer;
+}
+
+ul[role="menubar"] > li > a {
+	color: black;
+}
+
+ul[role="menubar"] > li > a:hover {
+	color: black;
+	text-decoration: none;
+}
+
+.blog-head > :not(ul[role="menubar"]) {
+	margin-left: 6px;
+	margin-right: 6px;
+}
+
+.window-blog {
+	max-width: 38rem;
+	min-width: unset;
+}
+
+.blog-window-body {
+	display: flex !important;
+	flex-flow: column;
+}
+
+.blog-head {
+	flex: 1 1 auto;
+}
+
+fieldset {
+	height: 100%;
+	flex: 1 1 auto;
+	margin: 0 6px 6px 6px;
+}
+
+.blog-text {
+	overflow: auto;
+}
+
+.blog-text > p {
+	font-size: 16px;
+}
+
+.blog-content {
+}
+
+@media only screen and (max-width: 38rem) {
+	.window-blog {
+		width: 100%;
+		max-width: unset;
+	}
+}

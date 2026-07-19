@@ -1,0 +1,67 @@
+.title-bar-text {
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
+}
+
+body {
+	display: flex;
+	margin: unset;
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-window {
+	width: 80%;
+	min-width: fit-content;
+	max-width: 97%;
+}
+
+.main-window-body {
+	height: 60vh;
+	min-height: fit-content;
+}
+
+.grid-badges > fieldset {
+	margin-left: 6px;
+}
+
+.grid-layout-badged {
+	grid-template-areas:
+		"grid-nav grid-content grid-content"
+		"grid-nav grid-content grid-content"
+		"grid-nav grid-content grid-content"
+		"grid-nav grid-content grid-content"
+		"grid-nav grid-badges grid-badges" !important;
+}
+
+.grid-layout {
+	display: grid;
+	grid-template-areas: "grid-nav grid-content grid-content";
+	grid-template-columns: 0.5fr 3.5fr;
+	height: calc(65vh);
+	min-height: fit-content;
+}
+
+.grid-layout div.grid-nav {
+	grid-area: grid-nav;
+	min-height: 100%;
+}
+
+.grid-layout div.grid-content {
+	margin-left: 6px;
+	grid-area: grid-content;
+	justify-content: center;
+	width: 100%;
+}
+
+.grid-layout div.grid-badges {
+	grid-area: grid-badges;
+	justify-self: center;
+}
+
+body {
+	background: black no-repeat 180% 0/60% fixed url("/src/img/Background.svg") !important;
+}

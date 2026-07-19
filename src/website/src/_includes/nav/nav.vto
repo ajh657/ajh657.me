@@ -1,0 +1,10 @@
+<ul class="tree-view has-connector has-container has-collapse-button">
+    <details open>
+        <summary><a href="/">Kerdu's Domain</a></summary>
+        {{ for item of nav.menu().children }}
+        <ul>
+            {{ include "nav/nav_item.vto" { item } }}
+        </ul>
+        {{ /for }}
+    </details>
+</ul>

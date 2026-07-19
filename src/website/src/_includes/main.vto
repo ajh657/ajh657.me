@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://unpkg.com/7.css">
+    <link rel="stylesheet" href="/src/css/personal.css">
+    <link rel="stylesheet" href="/src/css/7cssCustom.css">
+    {{ if CustomCSS != undefined }}
+    {{ for css of CustomCSS }}
+    <link rel="stylesheet" href="/src/css/{{css}}">
+    {{ /for }}
+    {{ /if }}
+    <title>Kerdu's Domain {{ if title }}- {{title}}{{ /if }}</title>
+</head>
+
+<body>
+    <div class="window glass active main-window" style="--w7-w-bg: #588053">
+        <div class="title-bar">
+            <div class="title-bar-text">Kerdu's Domain {{ if title }}- {{title}}{{ /if }}</div>
+        </div>
+        {{ include subLayout != undefined? subLayout: "subLayout/default.vto" }}
+</body>
+
+</html>
