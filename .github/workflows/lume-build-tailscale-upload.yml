@@ -15,18 +15,14 @@ jobs:
     steps:
       - name: Clone repository
         uses: actions/checkout@v4
+        with:
+          sparse-checkout: src/website/*
 
       - name: Tailscale
         uses: tailscale/github-action@v4
         with:
           authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
           ping: ${{ secrets.DESTINATION_HOST }}
-
-      - name: DEBUG List Current folder
-        run: ls -la
-
-      - name: Focus Website
-        run: cd ./src/website
 
       - name: DEBUG List Current folder
         run: ls -la
