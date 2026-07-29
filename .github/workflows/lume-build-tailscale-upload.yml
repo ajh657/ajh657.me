@@ -23,7 +23,7 @@ jobs:
           ping: ${{ secrets.DESTINATION_HOST }}
 
       - name: Focus Website
-        run: cd /src/website
+        run: cd ./src/website
 
       - name: Setup Deno environment
         uses: denoland/setup-deno@v2
