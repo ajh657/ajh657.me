@@ -22,8 +22,14 @@ jobs:
           authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
           ping: ${{ secrets.DESTINATION_HOST }}
 
+      - name: DEBUG List Current folder
+        run: ls -la
+
       - name: Focus Website
         run: cd ./src/website
+
+      - name: DEBUG List Current folder
+        run: ls -la
 
       - name: Setup Deno environment
         uses: denoland/setup-deno@v2
