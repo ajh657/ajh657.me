@@ -5,6 +5,10 @@ on:
     branches: [main]
   workflow_dispatch:
 
+defaults:
+  run:
+    working-directory: ./src/website
+
 permissions:
   contents: read
 
@@ -15,8 +19,6 @@ jobs:
     steps:
       - name: Clone repository
         uses: actions/checkout@v4
-        with:
-          sparse-checkout: src/website/*
 
       - name: Tailscale
         uses: tailscale/github-action@v4
