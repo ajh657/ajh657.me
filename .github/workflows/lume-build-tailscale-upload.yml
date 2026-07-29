@@ -47,3 +47,11 @@ jobs:
           source_dir: 'src/website/_site/'
           destination_dir: ${{ secrets.DESTINATION_FOLDER }}
           rm: true
+
+      - name: Fix well-known
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.DESTINATION_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          script: mv ${{ secrets.DESTINATION_FOLDER }}/_well-known ${{ secrets.DESTINATION_FOLDER }}/.well-known
