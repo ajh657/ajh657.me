@@ -44,6 +44,6 @@ jobs:
           ssh_port: ${{ secrets.DESTINATION_SSH_PORT }}
           ssh_username: ${{ secrets.SSH_USERNAME }}
           ssh_key: ${{ secrets.SSH_KEY }}
-          source_dir: '_site/*'
+          source_dir: 'src/website/_site/*'
           destination_dir: ${{ secrets.DESTINATION_FOLDER }}
           rm: true
