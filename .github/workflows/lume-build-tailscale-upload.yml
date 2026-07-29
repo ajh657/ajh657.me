@@ -20,10 +20,6 @@ jobs:
         uses: tailscale/github-action@v4
         with:
           authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
-
-      - name: Tailscale
-        uses: tailscale/github-action@v4
-        with:
           ping: ${{ secrets.DESTINATION_HOST }}
 
       - name: Focus Website
