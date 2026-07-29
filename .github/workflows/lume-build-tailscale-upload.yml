@@ -38,7 +38,7 @@ jobs:
         run: deno task build
 
       - name: Copy to Remote Server
-        uses: pierrickdelrieu/scp-action@v0.1.2
+        uses: pierrickdelrieu/scp-action@latest
         with:
           host: ${{ secrets.DESTINATION_HOST }}
           ssh_port: ${{ secrets.DESTINATION_SSH_PORT }}
