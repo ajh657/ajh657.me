@@ -41,8 +41,7 @@ body {
 	display: grid;
 	grid-template-areas: "grid-nav grid-content grid-content";
 	grid-template-columns: 0.5fr 3.5fr;
-	height: calc(65vh);
-	min-height: fit-content;
+	min-height: 100%;
 }
 
 .grid-layout div.grid-nav {
