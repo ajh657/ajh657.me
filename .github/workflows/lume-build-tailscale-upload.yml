@@ -48,6 +48,14 @@ jobs:
           destination_dir: ${{ secrets.DESTINATION_FOLDER }}
           rm: true
 
+      - name: Clean well-known
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.DESTINATION_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          script: rm -rf ${{ secrets.DESTINATION_FOLDER }}/.well-known
+
       - name: Fix well-known
         uses: appleboy/ssh-action@v1
         with:
