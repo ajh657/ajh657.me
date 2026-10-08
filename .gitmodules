@@ -1,3 +1,4 @@
 [submodule "src/website/src/hobbies"]
 	path = src/website/src/hobbies
 	url = ../ajh657.me-hobbies.git
+	branch = master
