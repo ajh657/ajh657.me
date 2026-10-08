@@ -1,4 +1,4 @@
-name: Publish on GitHub Pages
+name: Publish to selfhost
 
 on:
   push:
@@ -54,4 +54,4 @@ jobs:
           host: ${{ secrets.DESTINATION_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
-          script: mv ${{ secrets.DESTINATION_FOLDER }}/_well-known ${{ secrets.DESTINATION_FOLDER }}/.well-known
+          script: mv -f ${{ secrets.DESTINATION_FOLDER }}/_well-known ${{ secrets.DESTINATION_FOLDER }}/.well-known
