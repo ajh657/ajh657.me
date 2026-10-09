@@ -3,6 +3,8 @@ name: Publish to selfhost
 on:
   push:
     branches: [master]
+    paths:
+      - ./src/website
   workflow_dispatch:
 
 defaults:
@@ -28,9 +30,6 @@ jobs:
         with:
           authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
           ping: ${{ secrets.DESTINATION_HOST }}
-
-      - name: DEBUG tree repo
-        run: tree
 
       - name: Setup Deno environment
         uses: denoland/setup-deno@v2
