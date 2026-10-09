@@ -1,4 +1,6 @@
 {
   "deno.enable": true,
-  "deno.enablePaths": ["./src/generator"]
+  "deno.enablePaths": ["${workspaceFolder}/src/website"],
+  "deno.config": "${workspaceFolder}/src/website/deno.json",
+  "typescript.tsserver.experimental.enableProjectDiagnostics": false
 }
