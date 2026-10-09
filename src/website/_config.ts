@@ -83,6 +83,8 @@ async function syncHobbyLayouts(): Promise<void> {
 site.addEventListener("beforeBuild", syncHobbyLayouts);
 site.addEventListener("beforeUpdate", syncHobbyLayouts);
 
+site.ignore("./src/hobbies/.github");
+
 site.add("_well-known", "_well-known");
 site.add("img", "src/img");
 site.add("css", "src/css");
