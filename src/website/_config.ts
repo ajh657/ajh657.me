@@ -6,7 +6,7 @@ const site = lume({ src: "./src", prettyUrls: false });
 
 site.use(nav());
 
-const hobbyLayouts = join(Deno.cwd(), "src/hobbies/_layout");
+const hobbyLayouts = join(Deno.cwd(), "src/hobbies/_layouts");
 const includedLayouts = join(Deno.cwd(), "src/_includes/hobbies");
 
 async function copyChangedFile(
