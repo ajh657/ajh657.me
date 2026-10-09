@@ -29,8 +29,8 @@ jobs:
           authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
           ping: ${{ secrets.DESTINATION_HOST }}
 
-      - name: DEBUG List Current folder
-        run: ls -la
+      - name: DEBUG tree repo
+        run: tree
 
       - name: Setup Deno environment
         uses: denoland/setup-deno@v2
