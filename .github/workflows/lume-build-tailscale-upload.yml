@@ -6,8 +6,6 @@ on:
     paths:
       - ./src/website
   workflow_dispatch:
-  repository_dispatch:
-    types: [submodule-update]
 
 defaults:
   run:
