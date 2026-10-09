@@ -4,7 +4,7 @@ on:
   push:
     branches: [master]
     paths:
-      - ./src/website
+      - './src/website'
   workflow_dispatch:
 
 defaults:
