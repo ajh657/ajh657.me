@@ -21,12 +21,11 @@ jobs:
         shell: bash
 
     steps:
-      # Checkout the repository to the GitHub Actions runner
-      - name: Checkout
-        uses: actions/checkout@v2
+      - name: Clone repository
+        uses: actions/checkout@v4
         with:
-          token: ${{ secrets.CI_TOKEN }}
-          submodules: true
+          submodules: recursive
+          token: ${{ secrets.READ_ONLY_PAT }}
 
       # Update references
       - name: Git Submodule Update
