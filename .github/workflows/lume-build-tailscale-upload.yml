@@ -39,6 +39,14 @@ jobs:
       - name: Build site
         run: deno task build
 
+      - name: Clean Website
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.DESTINATION_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          script: rm -rf ${{ secrets.DESTINATION_FOLDER }}/*
+
       - name: Copy to Remote Server
         uses: pierrickdelrieu/scp-action@0.1.2
         with:
